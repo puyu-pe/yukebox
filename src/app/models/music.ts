@@ -1,3 +1,4 @@
 export default interface Music{
-  title: string;
+  id: number;
+  titulo: string;
 }

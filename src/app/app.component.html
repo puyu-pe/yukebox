@@ -11,16 +11,15 @@
         <span class="absolute h-4/5 text-2xl flex items-center justify-center">❤️</span>
         <input type="text"
           class="bg-transparent border-b-2 border-stone-300 w-full outline-none text-2xl  text-white px-10 py-2"
-          placeholder="Ingresa el nombre música">
+          placeholder="Escribe tu música favorita.">
       </div>
     </form>
-    <ul class="flex flex-col gap-4 py-4">
-      <a *ngFor="let music of musics" class="text-stone-200 text-xl font-semibold transition-all hover:-translate-y-1 shadow-md rounded-2xl py-2 shadow-stone-400"
-        href="">
-        <li>
-          🔥{{ music.title }}
-        </li>
-      </a>
+    <ul class="flex flex-col gap-4 py-4 overflow-auto scrollbar-none rounded-2xl px-2">
+      <li *ngFor="let music of musics" class="text-stone-200 text-xl font-semibold transition-all hover:-translate-y-1 shadow-md rounded-2xl py-2 shadow-stone-400 px-2">
+        <a href="">
+          🔥{{ music.titulo }}
+        </a>
+      </li>
     </ul>
   </div>
 </div>
